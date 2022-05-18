@@ -16,6 +16,30 @@ people.forEach((person)=>{
 
 let average = sum1 / people.length;
 console.log(average);
+
+// Get an array of strings that say
+// 'Hi I am 'name' and I am 'age years old'
+// expecting person to be an object
+// writing the function
+
+const getInfo = (person)=>{
+  return `Hi I am ${person.name} and I am ${person.age} years old.`
+}
+
+//calling the function
+let paulInfo = getInfo(paul);
+let georgeInfo = getInfo(george);
+let joeInfo = getInfo(joe);
+console.log(paulInfo);
+console.log(georgeInfo);
+
+let peopleStrings = [];
+people.forEach((person)=>{
+  peopleStrings.push(`<p>Hi I am ${person.name} and I am ${person.age} years old.</p>`)
+})
+console.log(peopleStrings)
+
+// forEach returns undefined
 /*
 let nums = [10, 20, 30];
 // find average; sum of all / length
