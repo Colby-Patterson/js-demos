@@ -67,15 +67,18 @@ console.log('------')
 findHighest([4,3,2,1]) //4
 findHighest(nums) //100
 
-const findLowest = (numbers)=>{
-  console.log('Logging numbers ' + numbers)
-  let lowest = numbers[0]
-  numbers.forEach((num)=>{
-    if(num < lowest){
-      lowest = num
-    }
+const findLowest = (numbers) =>{
+  console.log(numbers) // [10, 20, 30, 40, -10, 100, 45]
+  let lowest = numbers[0] // 10
+  numbers.forEach((number)=>{
+      //iteration 6) num 100
+      if(number < lowest){
+          lowest = number
+      }
   })
-  console.log(lowest)
+  console.log(lowest);
+  return lowest
 }
 
 findLowest(nums);
+findLowest(1, 5, -72, -90, 700, 40, 10, 12345);
