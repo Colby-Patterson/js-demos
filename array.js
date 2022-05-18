@@ -46,5 +46,8 @@ let highestValue = nums[0];
 
 // loop through
 nums.forEach((num)=>{
-  console.log(num)
+  if (num > highestValue) {
+    highestValue = num;
+  }
 })
+console.log(highestValue);
