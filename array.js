@@ -1,4 +1,5 @@
 // https://codesandbox.io/s/js-array-y73m66?file=/src/index.js
+/*
 let nums = [10, 20, 30, 40, -10, 100, 45];
 
 // What is an array?
@@ -82,4 +83,39 @@ const findLowest = (numbers) =>{
 
 findLowest(nums);
 findLowest(1, 5, -72, -90, 700, 40, 10, 12345);
+*/
 
+let people = ['George', 'Paul', 'Joe'];
+
+// mutations (side effect)
+// add something to an array
+
+// when we get to react we don't want to add this way
+// no mutuation
+// copy the array instead
+
+let newPeople = [...people, 'Frank'];
+console.log(people);
+console.log(newPeople);
+
+const wrapInHeader = (str)=>{
+  return `<h1>${str}</h1>`
+}
+
+const getCharArray = (str)=>{
+  return str.split('')
+}
+
+const header1 = wrapInHeader('YO');
+console.log(header1);
+
+// map doesn't mutate array it was called on
+const peopleHeaders = people.map(wrapInHeader);
+console.log(peopleHeaders);
+console.log(people);
+
+let chars = getCharArray('hello');
+console.log(chars);
+
+let nameArrays = people.map(getCharArray);
+console.log(nameArrays);
