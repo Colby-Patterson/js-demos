@@ -4,7 +4,7 @@
 
 let paul = {name: 'Paul', age: 22};
 let george = {name: 'George', age: 22};
-let joe = {name: 'Joe', age: 35};
+let joe = {name: 'Joe', age: 20};
 
 let people = [paul, george, joe];
 
@@ -23,7 +23,7 @@ console.log(average);
 // writing the function
 
 const getInfo = (person)=>{
-  return `Hi I am ${person.name} and I am ${person.age} years old.`
+  return `<h1>Hi I am ${person.name} and I am ${person.age} years old.</h1>`
 }
 
 //calling the function
@@ -40,8 +40,22 @@ people.forEach((person)=>{
 console.log(peopleStrings)
 
 // forEach returns undefined
+// map function goes through each thing and performs the function you pass it, returns array
+let peopleHTML = people.map(getInfo);
+console.log(peopleHTML);
+
+// filter
+const isOver21 = (person)=>{
+  return person.age >= 21
+}
+
+// filter goes through each of the things; if the function you pass it returns true it keeps the thing
+let peopleOver21 = people.filter(isOver21);
+console.log(peopleOver21);
+
+//let nums = [10, 20, 30];
+
 /*
-let nums = [10, 20, 30];
 // find average; sum of all / length
 // I need to loop through and add up all numbers
 // I need to keep track of the sum
