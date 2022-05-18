@@ -51,3 +51,31 @@ nums.forEach((num)=>{
   }
 })
 console.log(highestValue);
+
+const findHighest = (numbers) => {
+  let highestValue = numbers[0];
+  //loop through
+  numbers.forEach((num) => {
+    if (num > highestValue) {
+      highestValue = num;
+    }
+  });
+  console.log(highestValue);
+};
+
+console.log('------')
+findHighest([4,3,2,1]) //4
+findHighest(nums) //100
+
+const findLowest = (numbers)=>{
+  console.log('Logging numbers ' + numbers)
+  let lowest = numbers[0]
+  numbers.forEach((num)=>{
+    if(num < lowest){
+      lowest = num
+    }
+  })
+  console.log(lowest)
+}
+
+findLowest(nums);
